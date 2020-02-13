@@ -1,21 +1,23 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-int main(){
+#include <stdio.h>
+int main() {
 	char c;
-	int y=0,k=0,s=0,f=0;
-	while((c=getchar())!="\n"){
-		if(0<=a[i]<=9){
+	int l = 0, s = 0, d = 0, o = 0;
+	printf("请输入一行字符：");
+	while ((c = getchar()) != '\n') {
+		if (c >= 'a' && c <= 'z' || c >= 'A' && c <= 'Z') {
+			l++;
+		}
+		else if (c == ' ') {
 			s++;
-		}else if((("a"<=a[i])&&(a[i]<="z"))||(("A"<=a[i])&&(a[i]<="Z"))){
-			z++;
-		}else if(a[i]==" "){
-			k++;
-		}else{
-			f++;
+		}
+		else if (c >= '0' && c <= '9') {
+			d++;
+		}
+		else {
+			o++;
+
 		}
 	}
-	printf("数字:%d\n字母:%d\n空格:%d\n字符:%d",s,z,k,f);
+	printf("字母数:%d\n空格数:%d\n数字数:%d\n其他字符:%d\n", l, s, d, o);
 	return 0;
-} 
-
+}

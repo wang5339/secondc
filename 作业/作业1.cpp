@@ -1,13 +1,14 @@
-#include<stdio.h>
-#include<stdlib.h>
-int main() {
-	int i,j,k; 
-	for (i = 1; i <= 4; i++) {
-		for (j = 1; j <= 4; j++) {
-			for (k = 1; k <= 4; k++) {
-				printf("%d\n", i * 100 + j * 10 + k);
-			}
-		}
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+int main(){ 
+	long int i,x,y;   
+	for(i = 0;i <= 100000;++i)    {    
+		x = sqrt(i+100);   
+		y = sqrt(i+268);
+		if((x*x == i + 100)&&(y*y == i+268))  
+			printf("%ld\t",i);  
 	}
 	return 0;
 }
+
